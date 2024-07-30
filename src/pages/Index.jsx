@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
-import { Heart } from "lucide-react";
+import { Heart, PlusCircle } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Index = () => {
   return (
@@ -20,6 +21,12 @@ const Index = () => {
       </header>
 
       <main className="container mx-auto text-center mt-20">
+        <Link to="/create-project">
+          <Button variant="outline" className="mb-8">
+            <PlusCircle className="mr-2 h-4 w-4" />
+            Create New Project
+          </Button>
+        </Link>
         <div className="w-48 h-48 mx-auto mb-8 bg-gradient-to-br from-orange-400 via-green-300 to-blue-500 rounded-full"></div>
         <h1 className="text-5xl font-bold mb-4">The last piece of software.</h1>
         <p className="text-xl mb-8">
