@@ -61,6 +61,7 @@ const Project = () => {
       </Button>
       <ProjectSettings isOpen={isSettingsOpen} onClose={() => setIsSettingsOpen(false)} />
     </div>
+  </div>
   );
 };
 
