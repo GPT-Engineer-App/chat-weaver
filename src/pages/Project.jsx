@@ -22,12 +22,12 @@ const Project = () => {
   };
 
   return (
-    <div className="container mx-auto p-4">
-      <h1 className="text-2xl font-bold mb-4">Project {id}</h1>
-      <div className="bg-gray-100 p-4 rounded-lg h-96 overflow-y-auto mb-4">
+    <div className="container mx-auto p-4 bg-white rounded-lg shadow">
+      <h1 className="text-2xl font-bold mb-4 text-gray-900">Project {id}</h1>
+      <div className="bg-gray-200 p-4 rounded-lg h-96 overflow-y-auto mb-4">
         {messages.map((message) => (
           <div key={message.id} className={`mb-2 ${message.sender === 'user' ? 'text-right' : 'text-left'}`}>
-            <span className={`inline-block p-2 rounded-lg ${message.sender === 'user' ? 'bg-blue-500 text-white' : 'bg-gray-300'}`}>
+            <span className={`inline-block p-2 rounded-lg ${message.sender === 'user' ? 'bg-blue-500 text-white' : 'bg-gray-300 text-gray-900'}`}>
               {message.text}
             </span>
           </div>
