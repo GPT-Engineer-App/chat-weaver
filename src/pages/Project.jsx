@@ -9,6 +9,7 @@ const Project = () => {
   const [messages, setMessages] = useState([]);
   const [input, setInput] = useState('');
   const [isSettingsOpen, setIsSettingsOpen] = useState(false);
+  const [iframeUrl] = useState('https://www.google.com');
 
   const handleSendMessage = () => {
     if (input.trim()) {
@@ -24,7 +25,16 @@ const Project = () => {
     <div className="flex h-screen bg-gray-100">
       <div className="flex-1 flex flex-col p-4">
         <h1 className="text-2xl font-bold mb-4 text-gray-900">Project {id}</h1>
-        <div className="flex-1 bg-white p-4 rounded-lg shadow overflow-y-auto mb-4">
+        <div className="flex-1 flex flex-col space-y-4">
+          <div className="flex-1 bg-white p-4 rounded-lg shadow overflow-hidden">
+            <iframe
+              src={iframeUrl}
+              title="Project Preview"
+              className="w-full h-full border-0"
+              sandbox="allow-scripts allow-same-origin"
+            />
+          </div>
+          <div className="flex-1 bg-white p-4 rounded-lg shadow overflow-y-auto">
           {messages.map((message) => (
             <div key={message.id} className={`mb-2 ${message.sender === 'user' ? 'text-right' : 'text-left'}`}>
               <span className={`inline-block p-2 rounded-lg ${message.sender === 'user' ? 'bg-blue-500 text-white' : 'bg-gray-300 text-gray-900'}`}>
