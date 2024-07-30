@@ -7,11 +7,11 @@ const Index = () => {
     <div className="min-h-screen bg-black text-white">
       <header className="flex justify-between items-center p-4">
         <div className="flex items-center">
-          <Heart className="w-6 h-6 mr-2" />
-          <span className="font-bold">lovable</span>
+          <Heart className="w-6 h-6 mr-2 text-white" />
+          <span className="font-bold text-white">lovable</span>
         </div>
         <nav>
-          <ul className="flex space-x-6">
+          <ul className="flex space-x-6 text-white">
             <li>GPT Engineer</li>
             <li>Vision</li>
             <li>News</li>
@@ -20,9 +20,9 @@ const Index = () => {
         </nav>
       </header>
 
-      <main className="container mx-auto text-center mt-20">
+      <main className="container mx-auto text-center mt-20 text-white">
         <Link to="/create-project">
-          <Button variant="outline" className="mb-8">
+          <Button variant="outline" className="mb-8 text-white border-white hover:bg-white hover:text-black">
             <PlusCircle className="mr-2 h-4 w-4" />
             Create New Project
           </Button>
@@ -38,15 +38,15 @@ const Index = () => {
           <span className="text-2xl font-semibold">It starts with an AI software engineer.</span>
         </div>
         <div className="grid grid-cols-3 gap-4 max-w-4xl mx-auto">
-          <Button variant="outline" className="p-6 h-auto flex flex-col items-start">
+          <Button variant="outline" className="p-6 h-auto flex flex-col items-start text-white border-white hover:bg-white hover:text-black">
             <span className="text-lg font-semibold mb-2">For Everyone</span>
             <span className="text-sm text-left">Chat with AI to build and deploy web apps, with no technical knowledge needed.</span>
           </Button>
-          <Button variant="outline" className="p-6 h-auto flex flex-col items-start">
+          <Button variant="outline" className="p-6 h-auto flex flex-col items-start text-white border-white hover:bg-white hover:text-black">
             <span className="text-lg font-semibold mb-2">For Developers</span>
             <span className="text-sm text-left">Collaborate in chat and code with an AI engineer, to build at lightning speed.</span>
           </Button>
-          <Button variant="outline" className="p-6 h-auto flex flex-col items-start">
+          <Button variant="outline" className="p-6 h-auto flex flex-col items-start text-white border-white hover:bg-white hover:text-black">
             <span className="text-lg font-semibold mb-2">For Agencies</span>
             <span className="text-sm text-left">Partner with AI to streamline web app creation, iteration, and support.</span>
           </Button>
